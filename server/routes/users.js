@@ -3,6 +3,17 @@ var router = express.Router();
 
 var userDao = require('../dao/userDao');
 
+router.post('/addUser',function (req, res, next) {
+    // 打印post请求的数据内容
+    console.log(req.body);
+    console.log(req.body.username);
+    console.log(req.body.password);
+    if (req.body.username == "a" && req.body.password == "a") {
+        res.end(JSON.stringify(dataSuccess));
+    } else {
+        res.end(JSON.stringify(dataError));
+    }
+});
 /* GET users listing. */
 router.get('/', function(req, res, next) {
     res.send('respond with a resource');

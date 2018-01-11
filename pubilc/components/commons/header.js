@@ -9,8 +9,8 @@ class Header extends Component{
     render(){
         return (
             <div>
-                <nav className="navbar navbar-default navbar-inverse navbar-static-top header" role="navigation">
-                    <div className="container-fluid">
+                <nav className="navbar navbar-default navbar-static-top header" role="navigation">
+                    <div className="container">
                         <div className="navbar-header">
                             <button type="button" className="navbar-toggle" data-toggle="collapse"
                                     data-target="#example-navbar-collapse">
@@ -25,26 +25,24 @@ class Header extends Component{
                             <ul className="nav navbar-nav">
                                 <li className=""><a href="#">测试</a></li>
                                 <li><a href="#">测试</a></li>
-                                <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                        商品分类 <b className="caret"></b>
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li><a href="#">学习文具</a></li>
-                                        <li><a href="#">生活用品</a></li>
-                                        <li><a href="#">交通工具</a></li>
-                                        <li className="divider"></li>
-                                        <li><a href="#">衣装服饰</a></li>
-                                        <li className="divider"></li>
-                                        <li><a href="#">专业书籍</a></li>
-                                    </ul>
-                                </li>
+                                {/*<li className={"dropdown"}>*/}
+                                    {/*<a href="#" className="dropdown-toggle" data-toggle="dropdown">*/}
+                                        {/*商品分类 <b className="caret"></b>*/}
+                                    {/*</a>*/}
+                                    {/*<ul className="dropdown-menu">*/}
+                                        {/*<li><a href="#">学习文具</a></li>*/}
+                                        {/*<li><a href="#">生活用品</a></li>*/}
+                                        {/*<li><a href="#">交通工具</a></li>*/}
+                                        {/*<li className="divider"></li>*/}
+                                        {/*<li><a href="#">衣装服饰</a></li>*/}
+                                        {/*<li className="divider"></li>*/}
+                                        {/*<li><a href="#">专业书籍</a></li>*/}
+                                    {/*</ul>*/}
+                                {/*</li>*/}
                                 <li>
-                                    {/*<a href="/signin">登陆</a>*/}
                                     <Link to="/singin"  >登录</Link>
                                 </li>
                                 <li>
-                                    {/*<a href="/signin">登陆</a>*/}
                                     <Link to="/singup"  >注册</Link>
                                 </li>
                             </ul>
