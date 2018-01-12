@@ -15,17 +15,13 @@ class Code extends Component{
             bgImage: "",
             size: "4",
             captchaType: "Normal",
-            color: "",
-            code : "",
-            codeLength:"5",
-            random :"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R','S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']"
         };
     }
     renderCode(){
         //定义expression和result，expression是字符串，result可能是字符串也可能是数字
         var expression = '', result;
         //判断验证码类型
-        if (this.state.captchaType == 'Calculation') {
+        if (this.state.captchaType === 'Calculation') {
             result = 0;//计算类型则result为数字，初始化为0
             //获取随机的两个两位数
             var Calpre = Math.round(Math.random()*100);
@@ -48,7 +44,7 @@ class Code extends Component{
                     result = Calpre * Calafter;
                     break;
             }
-        } else if (this.state.captchaType == 'Normal'){
+        } else if (this.state.captchaType === 'Normal'){
             result = '';
             var codeNormal = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';//字母库
             for (var i =0; i < this.state.size; i ++) {

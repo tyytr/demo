@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
+// import Home from  '../home';
 // import
 class Header extends Component{
     constructor(props) {
@@ -9,8 +10,8 @@ class Header extends Component{
     render(){
         return (
             <div>
-                <nav className="navbar navbar-default navbar-static-top header" role="navigation">
-                    <div className="container">
+                <nav className="navbar navbar-default navbar-static-top header g-mb-0" role="navigation">
+                    <div className="container g-pa-10">
                         <div className="navbar-header">
                             <button type="button" className="navbar-toggle" data-toggle="collapse"
                                     data-target="#example-navbar-collapse">
@@ -23,7 +24,7 @@ class Header extends Component{
                         </div>
                         <div className="collapse navbar-collapse" id="example-navbar-collapse">
                             <ul className="nav navbar-nav">
-                                <li className=""><a href="#">测试</a></li>
+                                <li className=""><Link to="/home" >首页</Link></li>
                                 <li><a href="#">测试</a></li>
                                 {/*<li className={"dropdown"}>*/}
                                     {/*<a href="#" className="dropdown-toggle" data-toggle="dropdown">*/}
@@ -40,10 +41,10 @@ class Header extends Component{
                                     {/*</ul>*/}
                                 {/*</li>*/}
                                 <li>
-                                    <Link to="/singin"  >登录</Link>
+                                    <Link to="/singin" >登录</Link>
                                 </li>
                                 <li>
-                                    <Link to="/singup"  >注册</Link>
+                                    <Link to="/singup" >注册</Link>
                                 </li>
                             </ul>
                         </div>

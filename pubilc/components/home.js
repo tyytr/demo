@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
-// import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
-import Signin from "./auth/singin";
+import Left from './leftaffix'
 class Home extends Component{
     constructor(props) {
         super(props);
@@ -8,14 +7,10 @@ class Home extends Component{
     }
     render(){
         return (
-            <div>
-                {/*<Signin/>*/}
-                <div className="new" id={"New"}>
-                    <div className="new-text">
-                        <h1>测试</h1>
-                    </div>
+            <div className={"container"}>
+                <div className={"row"}>
+                    <Left/>
                 </div>
-
             </div>
         )
     }
